@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    padding: 20px;
+    background-color: cadetblue;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    font-size: x-large;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.intro {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+.about-content {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
