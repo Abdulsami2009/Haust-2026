@@ -1,8 +1,15 @@
 <%- include('partials/header') %>
-
-<section class="intro">
-    <p>Welcome to the best website in the country.</p>
-    <p>Here you will know more about me</p>
-</section>
-
+<main>
+  <h1>Vinsælar myndir</h1>
+  <div class="movie-grid">
+    <% movies.forEach(movie => { %>
+      <div class="movie-card">
+        <img src="<%= movie.image %>" alt="<%= movie.title %>">
+        <h3><%= movie.title %></h3>
+        <p><%= movie.year %></p>
+        <a href="/movie/<%= movie.id %>" class="btn">Skoða nánar</a>
+      </div>
+    <% }) %>
+  </div>
+</main>
 <%- include('partials/footer') %>

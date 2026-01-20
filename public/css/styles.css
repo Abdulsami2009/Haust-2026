@@ -19,6 +19,16 @@ nav a {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 h1 {
@@ -33,4 +43,14 @@ footer {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    animation: spin 30s linear infinite;
+}
+
+@keyframes spin { /*i used ai for this*/
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

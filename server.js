@@ -1,31 +1,39 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs')
 
 const app = express();
 const PORT = 3000;
 
-// 1. Stillingar fyrir Views (EJS)
-// Við segjum Express að leita að views í 'src/views' möppunni
-app.set('views', path.join(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
-
-// 2. Statískar skrár (CSS, myndir)
-// Allt sem er í 'public' möppunni verður aðgengilegt á vefnum (t.d. /css/styles.css)
+app.set('views', path.join(__dirname, 'src/views'));
 app.use(express.static(path.join(__dirname, 'public')));
+
+const getMovies = () => {
+  const data = fs.readFileSync
+  (path.join(__dirname, 'src/data/movies.json'));
+  return JSON.parse(data);
+};
 
 // 3. Slóðir (Routes)
 // Forsíða
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home'});
+    const movies = getMovies()
+    res.render('index', { title: 'Bíóvefurinn', movies});
 });
 
-// Um okkur síða
-app.get('/about', (req, res) => {
-    res.render('about', { title: 'About me'});
+
+app.get('/movie/:id', (req, res) => {
+    const movies = getMovies()
+     const movie = movies.find(m => m.id === req.params.id);
+
+  if (!movie) {
+    return res.status(404).render('404', { title: 'Síða fannst ekki' });
+}
+  res.render('movie-details', { title: movie.title, movie });
 });
 
-// 4. Villumeðhöndlun (404)
-// Ef engin ofangreind slóð passfar, grípum við það hér
+
 app.use((req, res) => {
     res.status(404).send('sida fannst ekki (404)');
 });
