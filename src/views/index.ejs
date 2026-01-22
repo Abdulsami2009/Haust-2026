@@ -1,13 +1,13 @@
 <%- include('partials/header') %>
 <main>
   <h1>Vinsælar myndir</h1>
-  <div class="movie-grid">
-    <% movies.forEach(movie => { %>
-      <div class="movie-card">
-        <img src="<%= movie.image %>" alt="<%= movie.title %>">
-        <h3><%= movie.title %></h3>
-        <p><%= movie.year %></p>
-        <a href="/movie/<%= movie.id %>" class="btn">Skoða nánar</a>
+  <div class="game-grid">
+    <% games.forEach(game => { %>
+      <div class="game-card">
+        <img class="image" src="<%= game.image %>" alt="<%= game.title %>">
+        <h3><%= game.title %></h3>
+        <p><%= game.year %></p>
+        <a href="/game/<%= game.id %>" class="btn">Skoða nánar</a>
       </div>
     <% }) %>
   </div>

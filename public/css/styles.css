@@ -19,17 +19,9 @@ nav a {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    animation: spin 20s linear infinite;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 
 h1 {
     text-align: center;
@@ -43,14 +35,25 @@ footer {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    animation: spin 30s linear infinite;
 }
 
-@keyframes spin { /*i used ai for this*/
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  max-width: 600px;
+  animation: zoom 2s infinite;
+}
+@keyframes zoom {
+  from {transform: scale(1);}
+  to {transform: scale(1.2);}
+}
+h3 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 20px;
 }

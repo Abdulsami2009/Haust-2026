@@ -9,28 +9,27 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-const getMovies = () => {
+const getGames = () => {
   const data = fs.readFileSync
-  (path.join(__dirname, 'src/data/movies.json'));
+  (path.join(__dirname, 'src/data/games.json'));
   return JSON.parse(data);
 };
 
-// 3. Slóðir (Routes)
-// Forsíða
+
 app.get('/', (req, res) => {
-    const movies = getMovies()
-    res.render('index', { title: 'Bíóvefurinn', movies});
+    const games = getGames()
+    res.render('index', { title: 'Games', games});
 });
 
 
-app.get('/movie/:id', (req, res) => {
-    const movies = getMovies()
-     const movie = movies.find(m => m.id === req.params.id);
+app.get('/game/:id', (req, res) => {
+    const games = getGames()
+     const game = games.find(g => g.id === req.params.id);
 
-  if (!movie) {
+  if (!game) {
     return res.status(404).render('404', { title: 'Síða fannst ekki' });
 }
-  res.render('movie-details', { title: movie.title, movie });
+  res.render('game-details', { title: game.title, game });
 });
 
 
@@ -38,7 +37,7 @@ app.use((req, res) => {
     res.status(404).send('sida fannst ekki (404)');
 });
 
-// 5. Ræsa þjóninn
+
 app.listen(PORT, () => {
     console.log(`Server keyrir a http://localhost:${PORT}`);
 });

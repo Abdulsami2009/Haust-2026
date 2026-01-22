@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+<main>
+<section class="game-detail">
+  <img class="image" src="<%= game.image %>" alt="<%= game.title %>">
+  <div>
+    <h1><%= game.title %> (<%= game.year %>)</h1>
+    <p><%= game.description %></p>
+    <a href="/">← Til baka</a>
+  </div>
+</section>
+</main>
+<%- include('partials/footer') %>
