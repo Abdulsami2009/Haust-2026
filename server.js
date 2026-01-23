@@ -21,6 +21,11 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'Games', games});
 });
 
+app.get('/about', (req, res) => {
+    const games = getGames()
+    res.render('about', { title: 'About me', games});
+});
+
 
 app.get('/game/:id', (req, res) => {
     const games = getGames()
