@@ -1,0 +1,16 @@
+@use 'variables' as *;
+@use 'base/reset';
+@use 'components/game-card';
+
+body {
+    background-color: $primary-color;
+    color: $text-light;
+    font-family: sans-serif;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}

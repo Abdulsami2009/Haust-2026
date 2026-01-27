@@ -38,11 +38,7 @@ app.get('/game/:id', (req, res) => {
 });
 
 
-app.use((req, res) => {
-    res.status(404).send('sida fannst ekki (404)');
-});
-
-
 app.listen(PORT, () => {
     console.log(`Server keyrir a http://localhost:${PORT}`);
+    console.log('Stop with ctrl + C');
 });
