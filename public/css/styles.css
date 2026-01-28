@@ -13,13 +13,12 @@ body {
 
 img, picture, video, canvas, svg {
   display: block;
-  max-width: 100%;
-
-  
+  max-width: 100%;  
 }
 
+
 .game-card {
-  background-color: rgb(51.5, 51.5, 51.5);
+  background-color: rgb(63, 54, 54);
   padding: 1rem;
   border-radius: 8px;
 }
@@ -30,25 +29,26 @@ img, picture, video, canvas, svg {
 }
 .game-card h3 {
   margin-top: 0.5rem;
-  color: #e50914;
+  color: #f8f2f2;
 }
 .game-card .btn {
   display: inline-block;
-  background-color: #e50914;
+  background-color: #09e5ae;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   text-decoration: none;
   border-radius: 4px;
-  margin-top: 1rem;
+  margin: 1rem 1rem 0 0;;
 }
 .game-card .btn:hover {
   opacity: 0.8;
-  background-color: #1a1a1a;
+  background-color: #f01010;
+  transition: ease-in-out 0.3s;
 }
 
 body {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #eee9e9;
+  color: #0a0101;
   font-family: sans-serif;
 }
 
@@ -59,7 +59,21 @@ body {
   padding: 2rem 0;
 }
 
-.game-detail{
-  text-align: center;
+.about-content {
+ text-align: center;
+ margin: auto;
+ background-color: royalblue;
+ padding: 2rem;
+ border-radius: 5px;
+ border: #0a0101 solid 2px;
+ :hover {
+  background-color: white;
+  border-radius: 8px;
+ }
 
 }
+
+.game-detail{
+  text-align: center;
+}
+
