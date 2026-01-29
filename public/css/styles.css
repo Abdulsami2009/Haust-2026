@@ -13,12 +13,11 @@ body {
 
 img, picture, video, canvas, svg {
   display: block;
-  max-width: 100%;  
+  max-width: 100%;
 }
 
-
 .game-card {
-  background-color: rgb(63, 54, 54);
+  background-color: white;
   padding: 1rem;
   border-radius: 8px;
 }
@@ -29,51 +28,32 @@ img, picture, video, canvas, svg {
 }
 .game-card h3 {
   margin-top: 0.5rem;
-  color: #f8f2f2;
+  color: #5609e5;
 }
 .game-card .btn {
   display: inline-block;
-  background-color: #09e5ae;
+  background-color: #5609e5;
   color: white;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 4px;
-  margin: 1rem 1rem 0 0;;
+  margin-top: 1rem;
 }
 .game-card .btn:hover {
   opacity: 0.8;
-  background-color: #f01010;
-  transition: ease-in-out 0.3s;
 }
 
 body {
-  background-color: #eee9e9;
-  color: #0a0101;
+  background-color: #fdf6f6;
+  color: #0c0c0c;
   font-family: sans-serif;
 }
 
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15rem;
+  gap: 2rem;
   padding: 2rem 0;
 }
 
-.about-content {
- text-align: center;
- margin: auto;
- background-color: royalblue;
- padding: 2rem;
- border-radius: 5px;
- border: #0a0101 solid 2px;
- :hover {
-  background-color: white;
-  border-radius: 8px;
- }
-
-}
-
-.game-detail{
-  text-align: center;
-}
-
+/*# sourceMappingURL=styles.css.map */

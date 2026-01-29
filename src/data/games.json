@@ -19,5 +19,29 @@
     "year": 2009,
     "description": "A game where you are in a open world and you do anything",
     "image": "images/minecraft.webp"
+  },
+
+     {
+    "id": "God Of War",
+    "title": "God Of War",
+    "year": 2018,
+    "description": "An action-adventure game based on Norse mythology.",
+    "image": "images/God_Of_War.webp"
+  },
+
+   {
+    "id": "GTA V",
+    "title": "GTA V",
+    "year": 2013,
+    "description": "An action-adventure game set in the fictional state of San Andreas.",
+    "image": "images/GTA5.webp"
+  },
+
+  {
+    "id": "Uncharted 4",
+    "title": "Uncharted 4",
+    "year": 2016,
+    "description": "An action-adventure game featuring the character Nathan Drake.",
+    "image": "images/uncharted4.webp"
   }
 ]
