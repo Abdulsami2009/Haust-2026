@@ -23,6 +23,7 @@ img, picture, video, canvas, svg {
 }
 .game-card img {
   width: 100%;
+  height: auto;
   border-radius: 4px;
   object-fit: cover;
 }
@@ -41,6 +42,7 @@ img, picture, video, canvas, svg {
 }
 .game-card .btn:hover {
   opacity: 0.8;
+  background-color: red;
 }
 
 body {
@@ -52,7 +54,7 @@ body {
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem;
+  gap: 3rem;
   padding: 2rem 0;
   text-align: center;
 }
