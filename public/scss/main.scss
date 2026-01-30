@@ -8,9 +8,10 @@ body {
     font-family: sans-serif;
 }
 
-.movie-grid {
+.game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Galdra-lína fyrir responsive kort
   gap: 2rem;
   padding: 2rem 0;
+  text-align: center;
 }
