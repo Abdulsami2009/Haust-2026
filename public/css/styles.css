@@ -17,7 +17,7 @@ img, picture, video, canvas, svg {
 }
 
 .game-card {
-  background-color: white;
+  background-color: rgb(10, 1, 10);
   padding: 1rem;
   border-radius: 8px;
 }
@@ -29,16 +29,22 @@ img, picture, video, canvas, svg {
 }
 .game-card h3 {
   margin-top: 0.5rem;
-  color: #5609e5;
+  color: #fdfdfd;
 }
 .game-card .btn {
   display: inline-block;
-  background-color: #5609e5;
+  background-color: #f7f6fa;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   text-decoration: none;
   border-radius: 4px;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: ease-in-out 0.3s;
+
+  :hover {
+    background-color: red;
+  }
 }
 .game-card .btn:hover {
   opacity: 0.8;
@@ -49,6 +55,8 @@ body {
   background-color: #fdf6f6;
   color: #0c0c0c;
   font-family: sans-serif;
+  text-align: center;
+  padding: 1rem;
 }
 
 .game-grid {
