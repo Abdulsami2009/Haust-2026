@@ -7,7 +7,7 @@ const index = (req, res) => {
 
 const detail = (req, res) => {
     const { id } = req.params;
-    const game = gameService.getGameId(id);
+    const game = gameService.getGameById(id);
 
 
     if (!game) {

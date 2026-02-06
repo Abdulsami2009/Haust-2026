@@ -12,12 +12,12 @@ const getGames = () => {
     return games;
 };
 
-const getGameId = (id) => {
+const getGameById = (id) => {
     const games = loadData();
     return games.find((g) => g.id === id);
 };
 
 module.exports = {
     getGames,
-    getGameId
+    getGameById
 };
