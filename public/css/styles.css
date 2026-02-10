@@ -13,17 +13,18 @@ body {
 
 img, picture, video, canvas, svg {
   display: block;
+  margin: 0 auto;
   max-width: 100%;
 }
 
 .game-card {
-  background-color: rgb(10, 1, 10);
+  background-color: gray;
   padding: 1rem;
   border-radius: 8px;
 }
 .game-card img {
   width: 100%;
-  height: auto;
+  height: 100px;
   border-radius: 4px;
   object-fit: cover;
 }
@@ -34,7 +35,7 @@ img, picture, video, canvas, svg {
 .game-card .btn {
   display: inline-block;
   background-color: #f7f6fa;
-  color: white;
+  color: black;
   padding: 1rem 1rem;
   text-decoration: none;
   border-radius: 4px;
@@ -49,6 +50,7 @@ img, picture, video, canvas, svg {
 .game-card .btn:hover {
   opacity: 0.8;
   background-color: red;
+  color: #f7f6fa;
 }
 
 body {
@@ -74,9 +76,10 @@ body {
 }
 
 .game-detail {
-  max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  padding: 1rem 1rem;
+  
 }
 
 /*# sourceMappingURL=styles.css.map */

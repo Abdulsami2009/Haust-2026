@@ -17,7 +17,12 @@ const detail = (req, res) => {
     res.render('game-details', { title: game.title, game });
 };
 
+const about = (req, res) => {
+    res.render('about', { title: 'About' });
+};
+
 module.exports = {
     index,
-    detail
+    detail,
+    about
 };
