@@ -10,7 +10,7 @@
     "id": "Roblox",
     "title": "Roblox",
     "year": 2006,
-    "description": "A virtual world and game platform where users can create and play games.",
+    "description": "A virtual world and game platform where users can create and play games",
     "image": "/images/Roblox.webp"
   },
     {
@@ -25,7 +25,7 @@
     "id": "God Of War",
     "title": "God Of War",
     "year": 2018,
-    "description": "An action-adventure game based on Norse mythology.",
+    "description": "An action-adventure game based on Norse mythology",
     "image": "/images/God_Of_War.webp"
   },
 
@@ -33,7 +33,7 @@
     "id": "GTA V",
     "title": "GTA V",
     "year": 2013,
-    "description": "An action-adventure game set in the fictional state of San Andreas.",
+    "description": "An action-adventure game set in the fictional state of San Andreas",
     "image": "/images/GTA5.webp"
   },
 
@@ -41,7 +41,7 @@
     "id": "Uncharted 4",
     "title": "Uncharted 4",
     "year": 2016,
-    "description": "An action-adventure game featuring the character Nathan Drake.",
+    "description": "An action-adventure game featuring the character Nathan Drake",
     "image": "/images/uncharted4.webp"
   }
 ]
