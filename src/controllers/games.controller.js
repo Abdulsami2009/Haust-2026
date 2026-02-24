@@ -1,21 +1,24 @@
 const gameService = require('../lib/gameService');
 
-const index = (req, res) => {
-    const games = gameService.getGames();
-    res.render('index', { title: 'Games', games });
-};
-
-const detail = (req, res) => {
-    const { id } = req.params;
-    const game = gameService.getGameById(id);
+async function index(req, res) {
+    const games = await gameService.getGames();
+    res.render('index', { title: 'Games', games});
+}
 
 
+async function game(req, res) {
+    const id = req.params.id;
+    const game = await gameService.getGameById(id);
+
+    console.log('Beðið um ID:', id);
+    console.log('Fannst mynd:', game);
     if (!game) {
-        return res.status(404).render('404', { title: 'Game Not Found' });
+        return res.status(404).render('404', {title: 'Síða fannst ekki' });
     }
 
-    res.render('game-details', { title: game.title, game });
-};
+    res.render('game-details', {title: game.title, game });
+}
+
 
 const about = (req, res) => {
     res.render('about', { title: 'About' });
@@ -23,6 +26,6 @@ const about = (req, res) => {
 
 module.exports = {
     index,
-    detail,
+    game,
     about
 };

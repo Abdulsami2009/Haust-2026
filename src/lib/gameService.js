@@ -1,23 +1,33 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('./db');
 
-const loadData = () => {
-    const filePath = path.join(__dirname, '../data/games.json');
-    const fileData = fs.readFileSync(filePath);
-    return JSON.parse(fileData);
-};
+async function getGames() {
+    const q = 'SELECT * FROM games ORDER BY created_at DESC';
+    try {
+        const result = await db.query(q);
+        return result.rows;
+    } catch (e) {
+        console.error('Error fetching games:', e);
+        return [];
+    }
+}
 
-const getGames = () => {
-    const games = loadData();
-    return games;
-};
+async function getGameById(id) {
+    const q = 'SELECT * FROM games WHERE id = $1';
+    try {
+        const result = await db.query(q, [id]);
 
-const getGameById = (id) => {
-    const games = loadData();
-    return games.find((g) => g.id === id);
-};
+        if (result.rows.length === 0) {
+            return null;
+        }
+
+        return result.rows[0];
+    }   catch (e) {
+        console.error('Error fetching game by ID:', e);
+        return null;
+    }
+}
 
 module.exports = {
     getGames,
-    getGameById
+    getGameById,
 };
