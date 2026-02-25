@@ -27,5 +27,5 @@ const about = (req, res) => {
 module.exports = {
     index,
     game,
-    about
+    about,
 };
